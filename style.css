@@ -207,6 +207,7 @@ canvas {
 }
 
 .site-header nav ul li a {
+        font-family: 'Roboto', sans-serif; /* Apply Roboto font */
     text-decoration: none;
     color: #ccc;
     font-size: 18px; /* Slightly larger for clarity */
