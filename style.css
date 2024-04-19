@@ -1,0 +1,253 @@
+@import url("https://use.typekit.net/jmk3xov.css");
+
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+
+:root {
+  --dark-bg: rgba(15, 15, 15, 0.95);
+  --spacing: 350px;
+
+  font-family: brandon-grotesque, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+main {
+  width: 100vw;
+  color: white;
+  z-index: 99;
+  position: absolute;
+  width: 100%;
+  margin: 0px auto;
+  padding: 120px 0px;
+  
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+h1, h2, h3, blockquote {
+  font-family: elevon, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+ h4 {
+        font-size: 48px;
+        color: #0a0a0a;
+        text-transform: uppercase;
+        background: -webkit-linear-gradient(45deg, #6a82fb, #fc5c7d);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        border-bottom: 3px solid #6a82fb;
+        padding-bottom: 10px;
+        margin: 0;
+    }
+    h5 {
+      font-size: 20px;
+      color: #0a0a0a;
+      text-transform: uppercase;
+      background: -webkit-linear-gradient(45deg, #6a82fb, #fc5c7d);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      padding-bottom: 10px;
+
+      margin: 0;
+  }
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+
+
+  header {
+    background: var(--dark-bg);
+    grid-column: 2 / span 5;
+    font-size: 2.5rem;
+    padding: 2rem;
+    margin-bottom: var(--spacing);
+  }
+
+  section {
+    grid-column: 2 / 8;
+    padding: 1rem;
+    background: var(--dark-bg);
+    font-size: 1.25rem;
+    line-height: 1.5;
+    margin-bottom: var(--spacing);
+  }
+
+  blockquote {
+    margin: 0;
+    padding: 0;
+    grid-column: 2 / span 9;
+    margin-bottom: var(--spacing);
+  }
+
+  blockquote p {
+    color: black;
+    background-color: white;
+    font-size: 4rem;
+    display: inline;
+    line-height: 1;
+  }
+
+
+
+
+
+.contact-footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #34495E;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    box-shadow: 0 -4px 8px rgba(0,0,0,0.3);
+    z-index: 1000;
+}
+
+
+
+.footer-content {
+    max-width: 960px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-form {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    padding: 10px;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"] {
+    padding: 10px;
+    border: 2px solid #2C3E50;
+    border-radius: 5px;
+    outline: none;
+    color: #333;
+    width: 30%;
+}
+
+.contact-form button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #16A085;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+}
+
+.contact-form button:hover {
+    background-color: #13856f;
+}
+
+.postscript {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #CCC;
+}
+
+  .left {
+    grid-column: 6 / 12;
+  }
+
+/* Ensures only the header elements within '.site-header' are targeted */
+.site-header {
+    background: linear-gradient(145deg, #000428, #004e92);
+    color: white;
+    width: 100%;
+    padding: 5px 20px; /* Minimal vertical padding for a smaller header */
+    box-shadow: 0 2px 15px rgba(0,0,0,0.2);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.site-header .header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.site-header .header-content h1 {
+    margin: 0;
+    font-size: 25px; /* Clear and larger text */
+    font-weight: bold;
+}
+
+.site-header nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.site-header nav ul li {
+    padding: 2px 5px;
+}
+
+.site-header nav ul li a {
+    text-decoration: none;
+    color: #ccc;
+    font-size: 18px; /* Slightly larger for clarity */
+    transition: color 0.3s, transform 0.3s;
+}
+
+.site-header nav ul li a:hover {
+    color: #d4d4ff;
+    transform: scale(1.1);
+}
+
+/* Resets potential external styling influences */
+.site-header *,
+.site-header *::before,
+.site-header *::after {
+    box-sizing: border-box; /* Ensures padding and borders are included in width/height calculations */
+}
+
+
+
+
+.dropdown .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    min-width: 160px;
+}
+
+.dropdown .dropdown-content li {
+    color: black;
+    padding: 12px 16px;
+    display: block;
+}
+
+.dropdown .dropdown-content li a {
+    color: black;
+    text-decoration: none;
+}
+
+.dropdown .dropdown-content li a:hover {
+    background-color: #ddd;
+}
