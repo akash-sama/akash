@@ -102,7 +102,7 @@ canvas {
 
 
 .contact-footer {
-    position: hover;
+    position: fixed;
     left: 0;
     bottom: 0;
     width: 100%;
@@ -117,7 +117,7 @@ canvas {
 
 
 .footer-content {
-    max-width: 960px;
+    max-width: 900px;
     margin: auto;
     display: flex;
     flex-direction: column;
