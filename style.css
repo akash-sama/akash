@@ -219,6 +219,7 @@ canvas {
     transform: scale(1.1);
 }
 
+
 /* Resets potential external styling influences */
 .site-header *,
 .site-header *::before,
