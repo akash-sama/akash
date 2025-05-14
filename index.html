@@ -9,6 +9,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>Akash Rao</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
   </head>
 
@@ -110,44 +112,122 @@
       <section class="left">
         <h2>🌮 Work History</h2>
 
-        <h3>Webtree Online</h3>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </p>
-        <h3>Meta</h3>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </p>
-        <h3>Reseach Assistant</h3>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </p>
+        <div class="work-card current-position">
+          <div class="work-header">
+            <h3>AI/ML Engineer</h3>
+            <span class="work-company">Independent Contractor</span>
+            <button class="toggle-btn" aria-label="Toggle details">
+              <i class="fas fa-chevron-down"></i>
+            </button>
+          </div>
+          
+          <div class="work-tags">
+            <span class="tag">ML Systems</span>
+            <span class="tag">Recommendations</span>
+            <span class="tag">Search</span>
+          </div>
+          
+          <div class="work-content">
+            <p>
+              Helping U.S.-based startups and small companies build smart, data-driven systems using recommendation tools and search technologies.
+              Advising early-stage founders by planning projects, estimating costs, and choosing the best tools and methods to build scalable products efficiently.
+            </p>
+          </div>
+        </div>
+        
+        <div class="work-card">
+          <div class="work-header">
+            <h3>Software Engineer – Artificial Intelligence</h3>
+            <span class="work-company">Pangensis</span>
+            <button class="toggle-btn" aria-label="Toggle details">
+              <i class="fas fa-chevron-down"></i>
+            </button>
+          </div>
+          
+          <div class="work-tags">
+            <span class="tag">NLP</span>
+            <span class="tag">Content Moderation</span>
+            <span class="tag">Production ML</span>
+          </div>
+          
+          <div class="work-content">
+            <p>
+              Led AI projects for a social media startup, improving how the platform handled images, videos, and text using advanced tools.
+              Built a system to automatically detect harmful or inappropriate text using language models, reducing toxic posts by 20%.
+              Managed the full process of gathering data, training AI models, and launching them into production smoothly.
+              Worked with global clients and investors to ensure AI features matched business needs. Also helped with tasks like analyzing marketing trends and fixing bugs.
+            </p>
+          </div>
+        </div>
+        
+        <div class="work-card">
+          <div class="work-header">
+            <h3>Research Assistant</h3>
+            <span class="work-company">PES University</span>
+            <button class="toggle-btn" aria-label="Toggle details">
+              <i class="fas fa-chevron-down"></i>
+            </button>
+          </div>
+          
+          <div class="work-tags">
+            <span class="tag">Quantum</span>
+            <span class="tag">Finance</span>
+            <span class="tag">Teaching</span>
+          </div>
+          
+          <div class="work-content">
+            <p>
+              Contributed to a research project that applied ideas from quantum physics to predict stock market trends, helping improve accuracy and reduce risk.
+              Taught and guided junior students in topics related to physics and quantum computing.
+            </p>
+          </div>
+        </div>
 
       </section>
 
-      <blockquote>
-        <p>Thanks for watching! <br>Get in touch if you like me!</p>
-
-        <h5><br>I work for cheap!</h5>
+      <blockquote id="cta-section">
+        <!-- CTA banner will be loaded by JavaScript -->
       </blockquote>
 
 <footer class="contact-footer">
     <div class="footer-content">
+        <div class="footer-header">
+            <h3 class="footer-title">Get in Touch</h3>
+            <p class="footer-subtitle">Let's create something amazing together</p>
+        </div>
         <form id="contactForm" class="contact-form glassy-form">
-            <div class="form-group">
-                <input type="text" id="name" name="name" required placeholder=" " />
-                <label for="name">Your Name</label>
+            <div class="form-row">
+                <div class="form-group">
+                    <input type="text" id="name" name="name" required placeholder=" " />
+                    <label for="name">Your Name</label>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="email" name="email" required placeholder=" " />
+                    <label for="email">Your Email</label>
+                </div>
+                <div class="form-group message-group">
+                    <textarea id="message" name="message" required placeholder=" " rows="1"></textarea>
+                    <label for="message">Your Message</label>
+                </div>
             </div>
-            <div class="form-group">
-                <input type="email" id="email" name="email" required placeholder=" " />
-                <label for="email">Your Email</label>
+            <div class="button-group">
+                <button type="submit" class="modern-btn">
+                    <span>Send Message</span>
+                    <i class="arrow-right">→</i>
+                </button>
             </div>
-            <div class="form-group">
-                <input type="text" id="message" name="message" required placeholder=" " />
-                <label for="message">Your Message</label>
-            </div>
-            <button type="submit" class="modern-btn">Send</button>
         </form>
+        <div class="footer-social">
+            <a href="https://github.com/akash-sama" class="social-link" target="_blank">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="#" class="social-link" target="_blank">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="mailto:your.email@example.com" class="social-link">
+                <i class="fas fa-envelope"></i>
+            </a>
+        </div>
         <p id="formFeedback" class="postscript"></p>
     </div>
 </footer>
@@ -158,22 +238,8 @@
     </main>
 
     <script type="module" src="/main.js"></script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    <script src="footer.js"></script>
+    <script src="work-history.js"></script>
+    <script src="examples/cta-banner.js"></script>
   </body>
 </html>

@@ -254,89 +254,89 @@ canvas {
     background-color: #ddd;
 }
 
-/* --- Modern Glassmorphism Contact Form --- */
+/* --- Minimal Glassmorphism Contact Form (Refined) --- */
 .glassy-form {
-  background: rgba(34, 40, 49, 0.7);
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-  backdrop-filter: blur(12px) saturate(180%);
-  -webkit-backdrop-filter: blur(12px) saturate(180%);
-  border-radius: 24px;
-  border: 1.5px solid rgba(255, 255, 255, 0.18);
-  padding: 32px 40px 24px 40px;
+  background: rgba(34, 40, 49, 0.5);
+  box-shadow: 0 2px 12px 0 rgba(31, 38, 135, 0.18);
+  backdrop-filter: blur(6px) saturate(120%);
+  -webkit-backdrop-filter: blur(6px) saturate(120%);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  padding: 14px 16px 10px 16px;
   display: flex;
   flex-wrap: wrap;
-  gap: 24px;
+  gap: 10px;
   justify-content: center;
   align-items: flex-end;
-  margin-bottom: 16px;
+  margin-bottom: 8px;
   transition: box-shadow 0.3s;
 }
 
 .form-group {
   position: relative;
-  width: 220px;
-  min-width: 180px;
+  width: 140px;
+  min-width: 100px;
   margin-bottom: 0;
 }
 
 .form-group input {
   width: 100%;
-  padding: 18px 14px 10px 14px;
-  font-size: 1.1rem;
-  background: rgba(255,255,255,0.12);
-  border: 1.5px solid rgba(255,255,255,0.25);
-  border-radius: 12px;
+  padding: 8px 8px 6px 8px;
+  font-size: 0.95rem;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.18);
+  border-radius: 6px;
   color: #fff;
   outline: none;
-  transition: border 0.3s, box-shadow 0.3s, background 0.3s;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  transition: border 0.2s, box-shadow 0.2s, background 0.2s;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.04);
   font-family: 'elevon', 'brandon-grotesque', sans-serif;
 }
 
 .form-group input:focus {
-  border: 1.5px solid #6a82fb;
-  background: rgba(255,255,255,0.18);
-  box-shadow: 0 0 0 2px #6a82fb44;
+  border: 1px solid #6a82fb;
+  background: rgba(255,255,255,0.13);
+  box-shadow: 0 0 0 1.5px #6a82fb33;
 }
 
 .form-group label {
   position: absolute;
-  left: 16px;
-  top: 18px;
-  color: #d4d4ff;
-  font-size: 1rem;
+  left: 10px;
+  top: 9px;
+  color: #b0b0d0;
+  font-size: 0.92rem;
   pointer-events: none;
   background: transparent;
-  transition: 0.2s cubic-bezier(.4,0,.2,1);
-  padding: 0 4px;
-  border-radius: 4px;
+  transition: 0.18s cubic-bezier(.4,0,.2,1);
+  padding: 0 2px;
+  border-radius: 2px;
 }
 
 .form-group input:focus + label,
 .form-group input:not(:placeholder-shown) + label {
-  top: -12px;
-  left: 10px;
-  font-size: 0.85rem;
+  top: -10px;
+  left: 6px;
+  font-size: 0.75rem;
   color: #fc5c7d;
   background: rgba(34,40,49,0.85);
-  padding: 0 8px;
-  font-weight: 700;
-  letter-spacing: 0.04em;
+  padding: 0 5px;
+  font-weight: 600;
+  letter-spacing: 0.03em;
 }
 
-/* --- Modern Animated Button --- */
+/* --- Minimal Animated Button --- */
 .modern-btn {
-  padding: 14px 38px;
-  font-size: 1.2rem;
+  padding: 8px 18px;
+  font-size: 1rem;
   font-family: 'elevon', 'brandon-grotesque', sans-serif;
-  font-weight: 700;
+  font-weight: 600;
   background: linear-gradient(90deg, #6a82fb 0%, #fc5c7d 100%);
   color: #fff;
   border: none;
-  border-radius: 16px;
-  box-shadow: 0 4px 24px 0 #6a82fb55, 0 1.5px 8px 0 #fc5c7d33;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px 0 #6a82fb33, 0 1px 3px 0 #fc5c7d22;
   cursor: pointer;
-  transition: background 0.3s, transform 0.15s, box-shadow 0.3s;
+  transition: background 0.2s, transform 0.12s, box-shadow 0.2s;
   position: relative;
   overflow: hidden;
   z-index: 1;
@@ -349,32 +349,32 @@ canvas {
   top: -50%;
   width: 200%;
   height: 200%;
-  background: radial-gradient(circle, #fc5c7d55 0%, transparent 70%);
+  background: radial-gradient(circle, #fc5c7d33 0%, transparent 70%);
   opacity: 0;
-  transition: opacity 0.4s;
+  transition: opacity 0.3s;
   z-index: 0;
 }
 
 .modern-btn:hover {
   background: linear-gradient(90deg, #fc5c7d 0%, #6a82fb 100%);
-  transform: translateY(-2px) scale(1.04) rotate(-1deg);
-  box-shadow: 0 8px 32px 0 #fc5c7d55, 0 2px 12px 0 #6a82fb33;
+  transform: translateY(-1px) scale(1.02);
+  box-shadow: 0 4px 16px 0 #fc5c7d33, 0 1.5px 6px 0 #6a82fb22;
 }
 
 .modern-btn:active {
-  transform: scale(0.98);
+  transform: scale(0.97);
 }
 
 .modern-btn:hover::before {
-  opacity: 0.18;
+  opacity: 0.10;
 }
 
 /* Responsive for mobile */
 @media (max-width: 600px) {
   .glassy-form {
     flex-direction: column;
-    padding: 18px 8px 12px 8px;
-    gap: 14px;
+    padding: 10px 4px 6px 4px;
+    gap: 7px;
   }
   .form-group {
     width: 100%;
@@ -382,7 +382,7 @@ canvas {
   }
   .modern-btn {
     width: 100%;
-    font-size: 1rem;
-    padding: 12px 0;
+    font-size: 0.95rem;
+    padding: 8px 0;
   }
 }

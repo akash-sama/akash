@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CTA Banner Integration Example</title>
+    <!-- Step 1: Link to your CSS file that contains the CTA banner styles -->
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        /* Just some example page styling */
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background-color: #1a1a1a;
+            color: white;
+            padding: 2rem;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        h1 {
+            color: #ff8e8e;
+        }
+        
+        .demo-btn {
+            background: #ff6b6b;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>CTA Banner Implementation</h1>
+        <p>There are two ways to add the "Thanks for watching" CTA banner to your page:</p>
+        
+        <h2>Method 1: Add the HTML directly</h2>
+        <p>Copy and paste this HTML structure anywhere in your page:</p>
+        <pre style="background: #333; padding: 15px; overflow: auto; border-radius: 4px;">
+&lt;div class="cta-banner"&gt;
+    &lt;button class="cta-close" aria-label="Close"&gt;
+        &lt;i class="fas fa-times"&gt;&lt;/i&gt;
+    &lt;/button&gt;
+    
+    &lt;h1 class="cta-title"&gt;Thanks for Watching!&lt;/h1&gt;
+    &lt;p class="cta-subtitle"&gt;Get in touch if you like what you see!&lt;/p&gt;
+    
+    &lt;div class="cheap-badge"&gt;
+        &lt;span class="cheap-text"&gt;I WORK FOR CHEAP&lt;/span&gt;
+    &lt;/div&gt;
+    
+    &lt;a href="#contact" class="cta-button"&gt;
+        &lt;i class="fas fa-rocket"&gt;&lt;/i&gt; Hire Me Before I Raise My Rates!
+    &lt;/a&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+    // Add class to show the banner
+    document.querySelector('.cta-banner').classList.add('visible');
+    
+    // Handle close button
+    document.querySelector('.cta-close').addEventListener('click', function() {
+        document.querySelector('.cta-banner').classList.remove('visible');
+    });
+&lt;/script&gt;
+        </pre>
+        
+        <h2>Method 2: Add via JavaScript (Recommended)</h2>
+        <p>Include this single script tag at the end of your body:</p>
+        <pre style="background: #333; padding: 15px; overflow: auto; border-radius: 4px;">
+&lt;script src="path/to/cta-banner.js"&gt;&lt;/script&gt;
+        </pre>
+        
+        <p>The script will automatically create and display the banner.</p>
+        
+        <button class="demo-btn" id="showBannerBtn">Show Banner Demo</button>
+    </div>
+    
+    <!-- Method 2 Implementation: Include the banner script -->
+    <script>
+        // Demo button to show banner on click
+        document.getElementById('showBannerBtn').addEventListener('click', function() {
+            // This function would normally come from cta-banner.js
+            // For demo purposes, we're defining it inline
+            
+            function createAndShowBanner() {
+                // Create the banner if it doesn't exist
+                if (!document.querySelector('.cta-banner')) {
+                    const banner = document.createElement('div');
+                    banner.className = 'cta-banner';
+                    
+                    banner.innerHTML = `
+                        <button class="cta-close" aria-label="Close">
+                            <i class="fas fa-times"></i>
+                        </button>
+                        
+                        <h1 class="cta-title">Thanks for Watching!</h1>
+                        <p class="cta-subtitle">Get in touch if you like what you see!</p>
+                        
+                        <div class="cheap-badge">
+                            <span class="cheap-text">I WORK FOR CHEAP</span>
+                        </div>
+                        
+                        <a href="#contact" class="cta-button">
+                            <i class="fas fa-rocket"></i> Hire Me Before I Raise My Rates!
+                        </a>
+                    `;
+                    
+                    document.body.appendChild(banner);
+                    
+                    // Add Font Awesome if needed
+                    if (!document.querySelector('link[href*="font-awesome"]')) {
+                        const fontAwesome = document.createElement('link');
+                        fontAwesome.rel = 'stylesheet';
+                        fontAwesome.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css';
+                        document.head.appendChild(fontAwesome);
+                    }
+                    
+                    // Add close button functionality
+                    banner.querySelector('.cta-close').addEventListener('click', function() {
+                        banner.classList.remove('visible');
+                        setTimeout(() => {
+                            banner.remove();
+                        }, 800);
+                    });
+                    
+                    // Show banner after a short delay
+                    setTimeout(() => {
+                        banner.classList.add('visible');
+                    }, 100);
+                }
+            }
+            
+            createAndShowBanner();
+        });
+    </script>
+</body>
+</html> 
