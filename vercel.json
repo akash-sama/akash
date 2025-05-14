@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/index.html" }
+  ],
+  "buildCommand": "npm run build && cp footer.js work-history.js dist/ && mkdir -p dist/examples && cp examples/cta-banner.js dist/examples/",
+  "outputDirectory": "dist",
+  "framework": "vite"
+} 

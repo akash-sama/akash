@@ -7,6 +7,11 @@ export default defineConfig({
       input: {
         main: resolve(__dirname, 'index.html'),
       },
+      external: [
+        'footer.js',
+        'work-history.js',
+        'examples/cta-banner.js'
+      ]
     },
   },
   // Make sure CSS is properly processed
