@@ -2,6 +2,11 @@ import './styles.css';
 import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 
+// Import local scripts
+import './footer.js';
+import './work-history.js';
+import './examples/cta-banner.js';
+
 // Setup
 
 const scene = new THREE.Scene();

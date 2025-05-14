@@ -6,14 +6,11 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: resolve(__dirname, 'index.html'),
-      },
-      external: [
-        'footer.js',
-        'work-history.js',
-        'examples/cta-banner.js'
-      ]
+      }
     },
   },
+  // Define public directory for static assets
+  publicDir: 'public',
   // Make sure CSS is properly processed
   css: {
     // Enable CSS modules if needed

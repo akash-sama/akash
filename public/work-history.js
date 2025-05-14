@@ -1,5 +1,4 @@
-// Work history card functionality
-const initWorkHistory = () => {
+document.addEventListener('DOMContentLoaded', () => {
     // Get all work cards and their headers
     const workCards = document.querySelectorAll('.work-card');
     
@@ -58,9 +57,4 @@ const initWorkHistory = () => {
             }
         });
     });
-};
-
-// Initialize on DOMContentLoaded
-document.addEventListener('DOMContentLoaded', initWorkHistory);
-
-export { initWorkHistory }; 
+}); 

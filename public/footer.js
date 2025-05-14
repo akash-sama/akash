@@ -1,5 +1,4 @@
-// Footer functionality
-const initFooter = () => {
+document.addEventListener('DOMContentLoaded', () => {
     const footer = document.querySelector('.contact-footer');
     let isFooterVisible = false;
     const scrollThreshold = 50; // pixels from bottom to trigger
@@ -36,9 +35,4 @@ const initFooter = () => {
 
     // Initial check
     handleScroll();
-};
-
-// Initialize on DOMContentLoaded
-document.addEventListener('DOMContentLoaded', initFooter);
-
-export { initFooter }; 
+}); 
